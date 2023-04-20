@@ -2,6 +2,7 @@ package io.gabriel.github.servicos;
 
 import java.util.Date;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -23,5 +24,10 @@ public class LocacaoServiceTest {
 		Assert.assertEquals(4.0,locacao.getValor(),0.01);
 		Assert.assertTrue(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()) );
 		Assert.assertTrue(DataUtils.isMesmaData(locacao.getDataRetorno(),DataUtils.obterDataComDiferencaDias(1)));
+		
+		//verificacao Assert That
+		Assert.assertThat(locacao.getValor(),CoreMatchers.is(4.0));
+		Assert.assertThat(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()),CoreMatchers.is(true));
+		Assert.assertThat(DataUtils.isMesmaData(locacao.getDataRetorno(),DataUtils.obterDataComDiferencaDias(1)),CoreMatchers.is(true));
     }
 }
