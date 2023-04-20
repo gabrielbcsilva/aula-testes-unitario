@@ -43,7 +43,7 @@ public class LocacaoService {
 		//Principios para testes unitários 
 		/*
 		 * Fast - Um teste unitário deve ser executado rápido
-		 * independent - Um teste não deve depender de outro, pode ser executado em qualquer ordem
+		 * independent/isolated - Um teste não deve depender de outro, pode ser executado em qualquer ordem e isoladamente
 		 * repeatable - pode ser executado quantas vezes quiser
 		 * Self-verifying - Um teste deve saber quando sua execução foi correta e quando falhou
 		 * Timely - Oportuno, criado no momento correto
